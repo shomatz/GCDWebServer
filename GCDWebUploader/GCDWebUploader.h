@@ -124,6 +124,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy) NSString* header;
 
 /**
+ *  Sets the accept for the uploader input.
+ */
+@property(nonatomic, copy) NSString* accept;
+
+/**
  *  Sets the prologue for the uploader web interface.
  *
  *  The default value is a short help text.
