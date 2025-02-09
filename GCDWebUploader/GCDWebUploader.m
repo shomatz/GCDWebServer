@@ -103,6 +103,11 @@ NS_ASSUME_NONNULL_END
                      }
 #endif
                    }
+                   
+                   NSString* accept = server.accept;
+                   if (accept == nil) {
+                     accept = @"*";
+                   }
                    NSString* header = server.header;
                    if (header == nil) {
                      header = title;
@@ -137,7 +142,8 @@ NS_ASSUME_NONNULL_END
                                                                      @"header" : header,
                                                                      @"prologue" : prologue,
                                                                      @"epilogue" : epilogue,
-                                                                     @"footer" : footer
+                                                                     @"footer" : footer,
+                                                                     @"accept" : accept
                                                                    }];
                  }];
 
